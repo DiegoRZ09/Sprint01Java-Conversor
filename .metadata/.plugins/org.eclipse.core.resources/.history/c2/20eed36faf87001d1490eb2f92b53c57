@@ -1,0 +1,11 @@
+package com.conversorMonedas;
+
+public interface ValidarInputs {
+	
+	public static boolean validaValorMoneda(String texto) {
+		return texto.matches("^$[0-9]+([\\.][0-9]+)?");
+		
+	}
+	
+
+}

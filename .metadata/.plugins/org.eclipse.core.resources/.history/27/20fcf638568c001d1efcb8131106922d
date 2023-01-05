@@ -1,0 +1,10 @@
+/**
+ * 
+ */
+/**
+ * @author Diego Reyes
+ *
+ */
+module Conversor {
+	requires java.desktop;
+}

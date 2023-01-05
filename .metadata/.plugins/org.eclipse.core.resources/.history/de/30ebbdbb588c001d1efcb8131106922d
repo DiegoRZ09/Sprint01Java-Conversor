@@ -1,0 +1,59 @@
+package com.conversor.consumirAPI;
+
+import java.net.URL;
+import java.util.Scanner;
+
+import javax.net.ssl.HttpsURLConnection;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+
+public class Conectar {
+
+	public static void main(String[] args) {
+		
+		try {
+			URL url = new URL("https://api.exchangerate.host/latest?base=USD&symbols=MXN");
+			HttpsURLConnection con = (HttpsURLConnection) url.openConnection();
+			con.setRequestMethod("GET");
+			con.connect();
+			
+			int codigoRespuesta = con.getResponseCode();
+			
+			if (codigoRespuesta != 200) {
+				throw new RuntimeException("Ocurrió un error: " + codigoRespuesta);
+			} else {
+				
+				StringBuilder stringRespuesta = new StringBuilder();
+				Scanner scanner = new Scanner(url.openStream());
+				
+				while(scanner.hasNext()) {
+					stringRespuesta.append(scanner.nextLine());
+				}
+				
+				scanner.close();
+				
+				System.out.println(stringRespuesta);
+				
+				JSONArray arregloJson = new JSONArray(stringRespuesta);
+				
+				JSONObject factor = arregloJson.getJSONObject(4);
+				
+				System.out.println(factor);
+
+		
+				
+			}
+			
+			
+			
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+}

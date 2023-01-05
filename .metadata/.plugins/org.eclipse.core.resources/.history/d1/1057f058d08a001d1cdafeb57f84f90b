@@ -1,0 +1,101 @@
+package com.conversorMonedas;
+
+import javax.swing.JOptionPane;
+
+public class ConvertirMonedas {
+	
+	//Moneda Nacional (MXN) a Divisas Extranjeras
+	
+	public void PesosADolar(double valorRecibido) {
+		
+		double monedaEnDolar = valorRecibido * 0.051;
+		monedaEnDolar = Math.round(monedaEnDolar*100)/100;
+		JOptionPane.showMessageDialog(null, valorRecibido + 
+				" Pesos es equivalente a: "
+				+ monedaEnDolar + " Dólares.");
+	}
+	
+	public void PesosAEuro(double valorRecibido) {
+		
+		double monedaEnEuro = valorRecibido * 0.048;
+		monedaEnEuro = Math.round(monedaEnEuro*100)/100;
+		JOptionPane.showMessageDialog(null, valorRecibido + 
+				" Pesos es equivalente a: "
+				+ monedaEnEuro + " Euros.");
+	}
+	
+	public void PesosALibra(double valorRecibido) {
+
+		double monedaEnLibra = valorRecibido * 0.043;
+		monedaEnLibra = Math.round(monedaEnLibra*100)/100;
+		JOptionPane.showMessageDialog(null, valorRecibido + 
+				" Pesos es equivalente a: "
+				+ monedaEnLibra + " Libras.");
+	}
+
+	public void PesosAYen(double valorRecibido) {
+
+		double monedaEnYen = valorRecibido * 6.87;
+		monedaEnYen = Math.round(monedaEnYen*100)/100;
+		JOptionPane.showMessageDialog(null, valorRecibido + 
+				" Pesos es equivalente a: "
+				+ monedaEnYen + " Yenes.");
+	}
+
+	public void PesosAWon(double valorRecibido) {
+
+		double monedaEnWon= valorRecibido * 65.18;
+		monedaEnWon = Math.round(monedaEnWon*100)/100;
+		JOptionPane.showMessageDialog(null, valorRecibido + 
+				" Pesos es equivalente a: "
+				+ monedaEnWon + " Wones.");
+	}
+	
+	//Divisas Extranjeras a Moneda Nacional (MXN)
+	
+	public void DolarAPesos(double valorRecibido) {
+		
+		double dolarEnMoneda = valorRecibido * 19.38;
+		dolarEnMoneda = Math.round(dolarEnMoneda*100)/100;
+		JOptionPane.showMessageDialog(null, valorRecibido + 
+				" Dólares es equivalente a: "
+				+ dolarEnMoneda + " Pesos.");
+	}
+	
+	public void EuroAPesos(double valorRecibido) {
+		
+		double euroEnMoneda = valorRecibido * 20.71;
+		euroEnMoneda = Math.round(euroEnMoneda*100)/100;
+		JOptionPane.showMessageDialog(null, valorRecibido + 
+				" Euros es equivalente a: "
+				+ euroEnMoneda + " Pesos.");
+	}
+	
+	public void LibraAPesos(double valorRecibido) {
+
+		double libraEnMoneda = valorRecibido * 23.39;
+		libraEnMoneda = Math.round(libraEnMoneda*100)/100;
+		JOptionPane.showMessageDialog(null, valorRecibido + 
+				" Libras es equivalente a: "
+				+ libraEnMoneda + " Pesos.");
+	}
+
+	public void YenAPesos(double valorRecibido) {
+
+		double yenEnMoneda = valorRecibido * 0.15;
+		yenEnMoneda = Math.round(yenEnMoneda*100)/100;
+		JOptionPane.showMessageDialog(null, valorRecibido + 
+				" Yenes es equivalente a: "
+				+ yenEnMoneda + " Pesos.");
+	}
+
+	public void WonAPesos(double valorRecibido) {
+
+		double wonEnMoneda= valorRecibido * 0.015;
+		wonEnMoneda = Math.round(wonEnMoneda*100)/100;
+		JOptionPane.showMessageDialog(null, valorRecibido + 
+				" Wones es equivalente a: "
+				+ wonEnMoneda + " Pesos.");
+	}
+
+}

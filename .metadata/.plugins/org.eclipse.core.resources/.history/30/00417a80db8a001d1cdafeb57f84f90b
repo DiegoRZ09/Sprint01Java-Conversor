@@ -1,0 +1,53 @@
+package com.conversor.conversorTemperatura;
+
+import javax.swing.JOptionPane;
+
+public class FunctionTemperatura {
+	
+	ConvertirTemperatura temperatura = new ConvertirTemperatura();
+	
+	public void ConvertirTemperaturas(double valorRecibido){
+		
+		Object[] opcionesConversion = {
+				"Grados Celsius a Grados Farenheit", 
+				"Grados Celsius a Grados Kelvin",
+				"Grados Farenheit a Grados Celsius",
+				"Grados Farenheit a Grados Kelvin",
+				"Grados Kelvin a Grados Celsius",
+				"Grados Kelvin a Grados Farenheit"
+				};
+		
+		String opcionSeleccionada = (JOptionPane.showInputDialog(null,
+				"Selecciona una opción para convertir TEMPERATURA", "Sprint 01 Conversor de Monedas",
+				JOptionPane.QUESTION_MESSAGE, null,
+				opcionesConversion, opcionesConversion[0])).toString();
+		
+		switch (opcionSeleccionada) {
+		case "Grados Celsius a Grados Farenheit" : 
+		
+			break;
+			
+		case "Grados Celsius a Grados Kelvin":
+			
+			break;
+			
+		case "Grados Farenheit a Grados Celsius":
+			
+			break;
+		
+		case "Grados Farenheit a Grados Kelvin" :
+		
+			break;
+			
+		case "Grados Kelvin a Grados Celsius":
+			
+			break;
+			
+		case "Grados Kelvin a Grados Farenheit":
+			
+			break;
+			
+		}
+	}
+
+}

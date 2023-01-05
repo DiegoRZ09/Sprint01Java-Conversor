@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="javax.management.openmbean.OpenMBeanAttributeInfo"/>
+    <fullyQualifiedTypeName name="com.conversorMonedas.ConvertirMonedas"/>
+    <fullyQualifiedTypeName name="com.conversorMonedas.Function"/>
+    <fullyQualifiedTypeName name="java.lang.Double"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="com.conversorMonedas.ValidarInputs"/>
+    <fullyQualifiedTypeName name="com.appLauncher.SeleccionaConversor"/>
+    <fullyQualifiedTypeName name="com.appLauncher.Principal"/>
+    <fullyQualifiedTypeName name="com.conversor.funcionalidades.SeleccionaConversor"/>
+    <fullyQualifiedTypeName name="com.conversor.funcionalidades.IngresarValores"/>
+    <fullyQualifiedTypeName name="com.conversor.utilities.ValidarInputs"/>
+    <fullyQualifiedTypeName name="com.conversor.conversorTemperatura.FunctionTemperatura"/>
+    <fullyQualifiedTypeName name="com.conversor.funcionalidades.MensajeFinal"/>
+    <fullyQualifiedTypeName name="com.conversor.conversorTemperatura.ConvertirTemperatura"/>
+    <fullyQualifiedTypeName name="com.conversor.funcionalidades.Convertir"/>
+    <fullyQualifiedTypeName name="java.net.URL"/>
+    <fullyQualifiedTypeName name="javax.net.ssl.HttpsURLConnection"/>
+    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="org.json.JSONArray"/>
+    <fullyQualifiedTypeName name="org.json.JSONObject"/>
+    <fullyQualifiedTypeName name="com.conversor.consumirAPI.Conectar"/>
+</qualifiedTypeNameHistroy>

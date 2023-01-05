@@ -1,0 +1,5 @@
+package com.conversorMonedas;
+
+public class ValidarInput {
+
+}

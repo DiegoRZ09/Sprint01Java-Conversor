@@ -1,0 +1,66 @@
+package com.conversor.conversorTemperatura;
+
+import javax.swing.JOptionPane;
+
+public class ConvertirTemperatura {
+	
+	
+	
+	public void CelsiusAFahrenheit(double valorRecibido) {
+		
+		double celsiusEnFahrenheit = (valorRecibido * (9/5)) + 32;
+		celsiusEnFahrenheit = (celsiusEnFahrenheit*100)/100;
+		JOptionPane.showMessageDialog(null, valorRecibido + 
+				" °C es igual a "
+				+ celsiusEnFahrenheit + " °F");
+	}
+	
+	public void CelsiusAKelvin(double valorRecibido) {
+		
+		double celsiusEnKelvin = valorRecibido + 273.15;
+		celsiusEnKelvin = (celsiusEnKelvin*100)/100;
+		JOptionPane.showMessageDialog(null, valorRecibido + 
+				" °C es igual a  "
+				+ celsiusEnKelvin + " °K");
+	}
+	
+	public void FahrenheitACelsius(double valorRecibido) {
+		
+		double FahrenheitEnCelsius = (valorRecibido - 32) * 5/9;
+		System.out.println((valorRecibido - 32) * 5/9);
+	
+		FahrenheitEnCelsius = (FahrenheitEnCelsius*100)/100;
+		JOptionPane.showMessageDialog(null, valorRecibido + 
+				" °F es igual a  "
+				+ FahrenheitEnCelsius + " °C");
+	}
+
+	public void FahrenheitAKelvin(double valorRecibido) {
+		
+		double FahrenheitEnKelvin = ((valorRecibido - 32) * 5/9) + 273.15;
+		FahrenheitEnKelvin = Math.round(FahrenheitEnKelvin*100)/100;
+		JOptionPane.showMessageDialog(null, valorRecibido + 
+				" °F es igual a  "
+				+ FahrenheitEnKelvin + " °K");
+	}
+
+	public void KelvinACelsius(double valorRecibido) {
+		
+		double KelvinEnCelsius = valorRecibido - 273.15;
+		KelvinEnCelsius = Math.round(KelvinEnCelsius*100)/100;
+		JOptionPane.showMessageDialog(null, valorRecibido + 
+				" °K es igual a  "
+				+ KelvinEnCelsius + " °C");
+	}
+	
+	public void KelvinAFahrenheit(double valorRecibido) {
+		
+		double KelvinEnFahrenheit = ((valorRecibido - 273.15) * 9/5 )+ 32;
+		KelvinEnFahrenheit = Math.round(KelvinEnFahrenheit*100)/100;
+		JOptionPane.showMessageDialog(null, valorRecibido + 
+				" °K es igual a  "
+				+ KelvinEnFahrenheit + " °F");
+	}
+	
+	
+}

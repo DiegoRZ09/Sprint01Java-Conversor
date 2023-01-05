@@ -1,0 +1,27 @@
+package com.conversorMonedas;
+
+import javax.swing.JOptionPane;
+
+public class ConvertirMonedas {
+	
+	public void PesosADolar(double valorRecibido) {
+		
+		double monedaEnDolar = valorRecibido * 0.051;
+		monedaEnDolar = Math.round(monedaEnDolar*100d)/100;
+		JOptionPane.showMessageDialog(null, valorRecibido + 
+				" pesos es equivalente a: "
+				+ monedaEnDolar + " Dólares.");
+		
+	}
+	
+	public void PesosAEuro(double valorRecibido) {
+		
+		double monedaEnEuro = valorRecibido * 0.051;
+		monedaEnEuro = Math.round(monedaEnEuro*100d)/100;
+		JOptionPane.showMessageDialog(null, valorRecibido + 
+				" pesos es equivalente a: "
+				+ monedaEnEuro + " Euros.");
+		
+	}
+
+}

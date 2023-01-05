@@ -1,0 +1,125 @@
+package com.conversor.funcionalidades;
+
+import javax.swing.JOptionPane;
+
+import com.conversor.conversorMonedas.ConvertirMonedas;
+import com.conversor.conversorTemperatura.ConvertirTemperatura;
+
+public interface Convertir {
+	
+	
+	public static void ConvierteMoneda(double valorRecibido){
+		
+		ConvertirMonedas moneda = new ConvertirMonedas();
+
+		
+		Object[] opcionesConversion = {
+				"Peso Mexicano a Dólar Estadounidense", 
+				"Peso Mexicano a Euro",
+				"Peso Mexicano a Libras Esterlinas",
+				"Peso Mexicano a Yen Japonés",
+				"Peso Mexicano a Won Sur-Coreano",
+				"Dólar Estadounidense a Peso Mexicano",
+				"Euro a Peso Mexicano",
+				"Libras Esterlinas a Peso Mexicano",
+				"Yen Japonés a Peso Mexicano",
+				"Won Sur-Coreano a Peso Mexicano"};
+		
+		String opcionSeleccionada = (JOptionPane.showInputDialog(null,
+				"Selecciona una opción para convertir tu dinero", "Sprint 01 Conversor de Monedas",
+				JOptionPane.QUESTION_MESSAGE, null,
+				opcionesConversion, opcionesConversion[0])).toString();
+		
+		switch (opcionSeleccionada) {
+		case "Peso Mexicano a Dólar Estadounidense" : 
+			moneda.PesosADolar(valorRecibido);
+			break;
+			
+		case "Peso Mexicano a Euro":
+			moneda.PesosAEuro(valorRecibido);
+			break;
+			
+		case "Peso Mexicano a Libras Esterlinas":
+			moneda.PesosALibra(valorRecibido);
+			break;
+		
+		case "Peso Mexicano a Yen Japonés":
+			moneda.PesosAYen(valorRecibido);
+			break;
+			
+		case "Peso Mexicano a Won Sur-Coreano":
+			moneda.PesosAWon(valorRecibido);
+			break;
+			
+		case "Dólar Estadounidense a Peso Mexicano":
+			moneda.DolarAPesos(valorRecibido);
+			break;
+			
+		case "Euro a Peso Mexicano":
+			moneda.EuroAPesos(valorRecibido);
+			break;
+			
+		case "Libras Esterlinas a Peso Mexicano":
+			moneda.LibraAPesos(valorRecibido);
+			break;
+			
+		case "Yen Japonés a Peso Mexicano":
+			moneda.YenAPesos(valorRecibido);
+			break;
+			
+		case "Won Sur-Coreano a Peso Mexicano":
+			moneda.WonAPesos(valorRecibido);
+			break;
+		}
+	}
+	
+	
+	public static void ConvierteTemperatura(double valorRecibido){
+		
+		ConvertirTemperatura temperatura = new ConvertirTemperatura();
+		
+		Object[] opcionesConversion = {
+				"Grados Celsius a Grados Fahrenheit", 
+				"Grados Celsius a Grados Kelvin",
+				"Grados Fahrenheit a Grados Celsius",
+				"Grados Fahrenheit a Grados Kelvin",
+				"Grados Kelvin a Grados Celsius",
+				"Grados Kelvin a Grados Fahrenheit"
+				};
+		
+		String opcionSeleccionada = (JOptionPane.showInputDialog(null,
+				"Selecciona una opción para convertir TEMPERATURA", "Sprint 01 Conversor de Monedas",
+				JOptionPane.QUESTION_MESSAGE, null,
+				opcionesConversion, opcionesConversion[0])).toString();
+		
+		switch (opcionSeleccionada) {
+		case "Grados Celsius a Grados Fahrenheit" : 
+			temperatura.CelsiusAFahrenheit(valorRecibido);
+			break;
+			
+		case "Grados Celsius a Grados Kelvin":
+			temperatura.CelsiusAKelvin(valorRecibido);
+			break;
+			
+		case "Grados Fahrenheit a Grados Celsius":
+			temperatura.FahrenheitACelsius(valorRecibido);
+			break;
+		
+		case "Grados Fahrenheit a Grados Kelvin" :
+			temperatura.FahrenheitAKelvin(valorRecibido);
+			break;
+			
+		case "Grados Kelvin a Grados Celsius":
+			temperatura.KelvinACelsius(valorRecibido);
+			break;
+			
+		case "Grados Kelvin a Grados Fahrenheit":
+			temperatura.KelvinAFahrenheit(valorRecibido);
+			break;
+			
+		}
+	}
+
+}
+
+

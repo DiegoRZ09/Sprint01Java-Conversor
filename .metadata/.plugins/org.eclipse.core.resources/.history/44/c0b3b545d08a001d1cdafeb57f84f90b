@@ -1,0 +1,59 @@
+package com.appLauncher;
+
+import javax.swing.JOptionPane;
+
+import com.conversorMonedas.Function;
+import com.utilities.ValidarInputs;
+
+public class Principal {
+	
+	public static void main(String[] args) {
+		
+		SeleccionaConversor();
+		
+		
+	}
+	
+	public static void SeleccionaConversor(){
+		Function convertir = new Function();
+		
+		Object[] posiblesOpciones = {"Conversor de Moneda", "Conversor de Temperatura"};
+		
+		String opcionSeleccionada = (JOptionPane.showInputDialog(null,
+				"Selecciona un conversor", "Sprint 01 Conversor",
+				JOptionPane.QUESTION_MESSAGE, null,
+				posiblesOpciones, posiblesOpciones[0])).toString();
+		
+		switch (opcionSeleccionada) {
+			case "Conversor de Moneda" : {
+	
+				String input = JOptionPane.showInputDialog("Ingrese el valor a convertir");
+				System.out.println(ValidarInputs.validaValorMoneda(input));
+	
+				if(ValidarInputs.validaValorMoneda(input)) {
+					
+					double valorRecibido = Double.parseDouble(input);
+					convertir.ConvertirMonedas(valorRecibido);
+					MensajeFinal();
+					
+				} else {
+					JOptionPane.showMessageDialog(null, "Valor NO válido (Sólo números enteros y decimales positivos)");
+					MensajeFinal();
+				}	
+			}
+			break;
+
+		}
+	}
+	
+	public static void MensajeFinal(){
+		int dialogoFinal = JOptionPane.showConfirmDialog(null, "¿Deseas realizar otra operación?");
+		if(JOptionPane.OK_OPTION == dialogoFinal) {
+			System.out.println("Seleccionaste Continuar");
+			SeleccionaConversor();
+		} else {
+			JOptionPane.showMessageDialog(null, "OK, HASTA LUEGO.");
+		}
+	}
+
+}

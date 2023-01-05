@@ -1,0 +1,29 @@
+package com.conversorMonedas;
+
+import javax.swing.JOptionPane;
+
+public class Function {
+	
+	ConvertirMonedas moneda = new ConvertirMonedas();
+	
+	public void ConvertirMonedas(double valorRecibido){
+		
+		Object[] opcionesConversion = {"Peso Mexicano a Dólar Estadounidense", "Peso Mexicano a Euro"};
+		
+		String opcionSeleccionada = (JOptionPane.showInputDialog(null,
+				"Selecciona una opción para convertir tu dinero", "Sprint 01 Conversor de Monedas",
+				JOptionPane.QUESTION_MESSAGE, null,
+				opcionesConversion, opcionesConversion[0])).toString();
+		
+		switch (opcionSeleccionada) {
+		case "Peso Mexicano a Dólar Estadounidense" : 
+			moneda.PesosADolar(valorRecibido);
+			break;
+			
+		case "Peso Mexicano a Euro":
+			moneda.PesosAEuro(valorRecibido);
+			break;
+		}
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.conversorMonedas;
+
+import javax.swing.JOptionPane;
+
+public class Principal {
+	
+	public static void main(String[] args) {
+		
+		Object[] posiblesOpciones = {"Conversor de Moneda", "Conversor de Temperatura"};
+		
+		String opcionSeleccionada = (JOptionPane.showInputDialog(null,
+				"Selecciona un conversor", "Sprint 01 Conversor",
+				JOptionPane.QUESTION_MESSAGE, null,
+				posiblesOpciones, posiblesOpciones[0])).toString();
+	}
+
+}

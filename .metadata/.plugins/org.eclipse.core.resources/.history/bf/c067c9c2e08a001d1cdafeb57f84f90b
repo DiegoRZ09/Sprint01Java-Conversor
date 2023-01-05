@@ -1,0 +1,71 @@
+package com.conversor.conversorMonedas;
+
+import javax.swing.JOptionPane;
+
+public class FunctionMoneda {
+	
+	ConvertirMonedas moneda = new ConvertirMonedas();
+	
+	public void ConvertirMonedas(double valorRecibido){
+		
+		Object[] opcionesConversion = {
+				"Peso Mexicano a Dólar Estadounidense", 
+				"Peso Mexicano a Euro",
+				"Peso Mexicano a Libras Esterlinas",
+				"Peso Mexicano a Yen Japonés",
+				"Peso Mexicano a Won Sur-Coreano",
+				"Dólar Estadounidense a Peso Mexicano",
+				"Euro a Peso Mexicano",
+				"Libras Esterlinas a Peso Mexicano",
+				"Yen Japonés a Peso Mexicano",
+				"Won Sur-Coreano a Peso Mexicano"};
+		
+		String opcionSeleccionada = (JOptionPane.showInputDialog(null,
+				"Selecciona una opción para convertir tu dinero", "Sprint 01 Conversor de Monedas",
+				JOptionPane.QUESTION_MESSAGE, null,
+				opcionesConversion, opcionesConversion[0])).toString();
+		
+		switch (opcionSeleccionada) {
+		case "Peso Mexicano a Dólar Estadounidense" : 
+			moneda.PesosADolar(valorRecibido);
+			break;
+			
+		case "Peso Mexicano a Euro":
+			moneda.PesosAEuro(valorRecibido);
+			break;
+			
+		case "Peso Mexicano a Libras Esterlinas":
+			moneda.PesosALibra(valorRecibido);
+			break;
+		
+		case "Peso Mexicano a Yen Japonés":
+			moneda.PesosAYen(valorRecibido);
+			break;
+			
+		case "Peso Mexicano a Won Sur-Coreano":
+			moneda.PesosAWon(valorRecibido);
+			break;
+			
+		case "Dólar Estadounidense a Peso Mexicano":
+			moneda.DolarAPesos(valorRecibido);
+			break;
+			
+		case "Euro a Peso Mexicano":
+			moneda.EuroAPesos(valorRecibido);
+			break;
+			
+		case "Libras Esterlinas a Peso Mexicano":
+			moneda.LibraAPesos(valorRecibido);
+			break;
+			
+		case "Yen Japonés a Peso Mexicano":
+			moneda.YenAPesos(valorRecibido);
+			break;
+			
+		case "Won Sur-Coreano a Peso Mexicano":
+			moneda.WonAPesos(valorRecibido);
+			break;
+		}
+	}
+
+}

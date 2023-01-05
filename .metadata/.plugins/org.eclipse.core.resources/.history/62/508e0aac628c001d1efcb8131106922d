@@ -1,0 +1,68 @@
+package com.conversor.consumirAPI;
+
+import java.net.URL;
+import java.util.Scanner;
+
+import javax.net.ssl.HttpsURLConnection;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+
+public class Conectar {
+
+	public static void main(String[] args) {
+		
+		try {
+			URL url = new URL("https://api.exchangerate.host/latest?base=USD&symbols=MXN");
+			HttpsURLConnection con = (HttpsURLConnection) url.openConnection();
+			con.setRequestMethod("GET");
+			con.connect();
+			
+			int codigoRespuesta = con.getResponseCode();
+			
+			if (codigoRespuesta != 200) {
+				throw new RuntimeException("Ocurrió un error: " + codigoRespuesta);
+			} else {
+				
+				StringBuilder stringRespuesta = new StringBuilder();
+				Scanner scanner = new Scanner(url.openStream());
+				
+				while(scanner.hasNext()) {
+					stringRespuesta.append(scanner.nextLine());
+				}
+				
+				scanner.close();
+				
+				System.out.println(stringRespuesta);
+				
+				String prueba = "[{\"motd\":{\"msg\":\"If you or your company use this project or like what we doing, please consider backing us so we can continue maintaining and evolving this project.\",\"url\":\"https://exchangerate.host/#/donate\"},\"success\":true,\"base\":\"USD\",\"date\":\"2023-01-04\",\"rates\":{\"MXN\":19.365235}}]";
+				
+				
+				JSONArray arregloJson = new JSONArray(prueba);
+				
+				//for(int indice = 0; indice < arregloJson.length(); indice ++) {
+					
+					JSONObject factor = arregloJson.getJSONObject(5);
+					
+					JSONObject dolarAPeso = factor.getJSONObject("rates");
+					System.out.println(dolarAPeso);
+				//}
+
+		
+				
+			}
+			
+			
+			
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
+	
+	
+}

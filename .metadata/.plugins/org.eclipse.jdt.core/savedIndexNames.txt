@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+C:\Users\Diego Reyes\Desktop\Diego-ONE\Java\Sprint01-Conversor\.metadata\.plugins\org.eclipse.jdt.core
+1039388983.index
+1865797976.index
+851016538.index
+1755799579.index
